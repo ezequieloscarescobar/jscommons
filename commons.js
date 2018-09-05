@@ -118,6 +118,7 @@ function showInModal(unModal, unContenido){
 }
 
 function showInSelect(unSelect, opcionesSerializadas){
+	vaciar(unSelect);
 	$.each(JSON.parse(opcionesSerializadas), function (index,unaOpcion){
 		unaOpcion = JSON.parse(unaOpcion);
 		var unaOpcionVisible = new Option(unaOpcion.nombre, unaOpcion.id);
