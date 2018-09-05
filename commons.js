@@ -208,6 +208,16 @@ function deletePara(unaURL, unCallBack, aceptaRespuesta = false , unParametro = 
 	sendAjax("DELETE",unaURL,{}, unCallBack, aceptaRespuesta, unParametro);
 }
 
+/* ------------------------------------- COMMONS URLs ---------------------------------------------------------*/
+function generate_url(urlBase, parametros = []){
+	var urlFinal = getBase() + urlBase;
+	parametros.forEach(function (unParametro){
+			urlFinal += "/"+unParametro;
+	});
+	return urlFinal;
+}
+
+/* ------------------------------------- COMMONS LOADERS ------------------------------------------------------*/
 $(document).ajaxStart(function(){
 	show('loader');
 	show('loader-modal');
