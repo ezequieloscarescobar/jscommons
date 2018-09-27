@@ -111,6 +111,12 @@ function callTrigger(unaVariableDelDocumento, unTrigger){
 	$("#"+unaVariableDelDocumento).trigger(unTrigger);
 }
 
+function showInDiv(unDiv, contenido){
+	vaciar(unDiv);
+	agregarA(unDiv, contenido);
+	show(unDiv);
+}
+
 function showInModal(unModal, unContenido){
 	vaciar(unModal);
 	agregarA(unModal,unContenido);
