@@ -23,6 +23,15 @@ function checkboxesSeleccionados(unCheckbox){
 	return vals;
 }
 
+function radioButtonSeleccionado(unRadioButton){
+ 	var radioButton = document.getElementsByName(unRadioButton+'()');
+ 	for (var i=0, n=radioButton.length;i<n;i++){
+  		if (radioButton[i].checked)
+   		return radioButton[i].value;
+ 	}
+ 	return null;
+}
+
 function cambiarValorDe(unaVariableDelDocumento,valor){
 	$("#"+unaVariableDelDocumento+"").val(valor);
 }
